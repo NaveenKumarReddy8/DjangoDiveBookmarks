@@ -10,7 +10,7 @@ from django.contrib.auth.views import (
 )
 from django.urls import include, path
 
-from account.views import dashboard, user_login
+from account.views import dashboard, edit, register, user_login
 
 urlpatterns = [
     # path("login/", user_login, name="login"),
@@ -40,4 +40,6 @@ urlpatterns = [
     # ),
     path("", include("django.contrib.auth.urls")),
     path("", dashboard, name="dashboard"),
+    path("register/", register, name="register"),
+    path("edit/", edit, name="edit"),
 ]
